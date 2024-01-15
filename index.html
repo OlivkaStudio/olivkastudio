@@ -6,9 +6,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap" rel="stylesheet">
-
   <title>Your Website</title>
-  
 </head>
 <body>
   <div class="image-container">
@@ -17,6 +15,29 @@
 
   <button id="readyButton">READY</button>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = ["image1.jpg", "image2.jpg", "image3.jpg"]; // Замените на пути к вашим изображениям
+      const imageElement = document.getElementById("mainImage");
+      const readyButton = document.getElementById("readyButton");
+      let currentImageIndex = 0;
+
+      function changeImage() {
+        imageElement.style.opacity = 0;
+        setTimeout(() => {
+          imageElement.src = images[currentImageIndex];
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          imageElement.style.opacity = 1;
+        }, 1000);
+      }
+
+      const intervalId = setInterval(changeImage, 5000);
+
+      readyButton.addEventListener("click", function () {
+        clearInterval(intervalId);
+        alert("Your website is READY!");
+      });
+    });
+  </script>
 </body>
 </html>
