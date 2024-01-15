@@ -47,7 +47,7 @@ body {
   }
   
   button:active {
-    background-color: #007acc; /* Смена цвета кнопки при клике */
-    border: 2px solid #007acc; /* Смена цвета обводки при клике */
+    background-color: #74fffd; /* Смена цвета кнопки при клике */
+    border: 2px solid #74fffd; /* Смена цвета обводки при клике */
   }
   
