@@ -19,6 +19,8 @@ body {
     width: 100%;
     height: auto;
     transition: opacity 1s ease-in-out;
+    animation: blurEffect 5s ease-in-out;
+
   }
   
   button {
@@ -51,3 +53,11 @@ body {
     border: 2px solid #74fffd; /* Смена цвета обводки при клике */
   }
   
+  @keyframes blurEffect {
+    from {
+      filter: blur(0px); /* Начальное значение - без размытия */
+    }
+    to {
+      filter: blur(10px); /* Конечное значение - размытие на 10 пикселей */
+    }
+  }
