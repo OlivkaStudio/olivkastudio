@@ -5,8 +5,8 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Your-Game-Font', Arial, sans-serif; /* Замените 'Your-Game-Font' на имя вашего шрифта */
-    background: linear-gradient(to bottom, #0e0e0e, #1a1a1a); /* Фон в форме градиента от чёрного к тёмно-серому */
+    font-family: 'Exo', Arial, sans-serif;
+    background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
   }
   
   .image-container {
