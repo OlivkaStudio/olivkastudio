@@ -9,10 +9,11 @@
   <title>Your Website</title>
 </head>
 <body>
-  <h1>MIKA, WORK AWAITS YOU</h1>
-  
   <div class="image-container">
     <img id="mainImage" src="img1.webp" alt="Main Image">
+    <div class="overlay-text">
+      <h1>MIKA, WORK AWAITS YOU</h1>
+    </div>
   </div>
 
   <button id="readyButton">READY</button>
@@ -22,6 +23,7 @@
       const images = ["img1.webp", "img2.webp", "img3.png"];
       const imageContainer = document.querySelector(".image-container");
       const imageElement = document.getElementById("mainImage");
+      const overlayText = document.querySelector(".overlay-text");
       const readyButton = document.getElementById("readyButton");
       let currentImageIndex = 0;
 
@@ -30,10 +32,12 @@
       function changeImage() {
         imageContainer.style.filter = "blur(10px)";
         imageElement.style.opacity = 0;
+        overlayText.style.opacity = 0; // Скрываем текст при смене изображения
         setTimeout(() => {
           imageElement.src = images[currentImageIndex];
           currentImageIndex = (currentImageIndex + 1) % images.length;
           imageElement.style.opacity = 1;
+          overlayText.style.opacity = 1; // Показываем текст после смены изображения
           imageContainer.style.filter = "blur(0px)";
         }, 1000);
       }
