@@ -13,11 +13,14 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
+    filter: blur(10px); /* Начальное значение блюра */
+    transition: filter 3s ease-in-out; /* Добавляем анимацию блюра */
   }
   
   img {
     width: 100%;
     height: auto;
+    transition: opacity 1s ease-in-out;
 
   }
   
