@@ -5,7 +5,8 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Your-Game-Font', Arial, sans-serif; /* Замените 'Your-Game-Font' на имя вашего шрифта */
+    background: linear-gradient(to bottom, #0e0e0e, #1a1a1a); /* Фон в форме градиента от чёрного к тёмно-серому */
   }
   
   .image-container {
@@ -22,13 +23,31 @@ body {
   
   button {
     position: absolute;
-    top: 50%; /* Размещаем кнопку по вертикали по центру изображения */
-    left: 50%; /* Размещаем кнопку по горизонтали по центру изображения */
-    transform: translate(-50%, -50%); /* Центрируем кнопку точно по центру изображения */
-    z-index: 1; /* Устанавливаем кнопку над изображением */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #000; /* Чёрный цвет кнопки */
+    color: #fff; /* Белый цвет текста кнопки */
+    border: 2px solid #00f; /* Синяя обводка */
+    border-radius: 5px; /* Скругленные углы */
+    outline: none; /* Убираем стандартный фокус */
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+  }
+  
+  button:hover {
+    background-color: #00f; /* Смена цвета кнопки при наведении */
+    color: #fff; /* Смена цвета текста при наведении */
+    border: 2px solid #00f; /* Смена цвета обводки при наведении */
+    box-shadow: 0px 0px 10px 2px #00f; /* Тень при наведении */
+  }
+  
+  button:active {
+    background-color: #007acc; /* Смена цвета кнопки при клике */
+    border: 2px solid #007acc; /* Смена цвета обводки при клике */
   }
   
