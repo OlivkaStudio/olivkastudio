@@ -1,64 +1,63 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Exo', Arial, sans-serif;
-    background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
-  }
-  
-  .image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    filter: blur(10px); /* Начальное значение блюра */
-    transition: filter 3s ease-in-out; /* Добавляем анимацию блюра */
-  }
-  
-  img {
-    width: 100%;
-    height: auto;
-    transition: opacity 1s ease-in-out;
+/* styles.css */
 
-  }
-  
-  button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 26px;
-    cursor: pointer;
-    background-color: #000; /* Чёрный цвет кнопки */
-    color: #fff; /* Белый цвет текста кнопки */
-    border: 2px solid rgb(0, 229, 255);
-    border-radius: 5px; /* Скругленные углы */
-    outline: none; /* Убираем стандартный фокус */
-    transition: background-color 0.3s, color 0.3s, border 0.3s;
-  }
-  
-  button:hover {
-    background-color: rgb(0, 229, 255);
-    color: #000000;
-    border: 2px solid rgb(0, 229, 255);
-    box-shadow: 0px 0px 10px 2px rgb(0, 229, 255);
-  }
-  
-  button:active {
-    background-color: #74fffd; /* Смена цвета кнопки при клике */
-    border: 2px solid #74fffd; /* Смена цвета обводки при клике */
-  }
-  
-  @keyframes blurEffect {
-    from {
-      filter: blur(0px); /* Начальное значение - без размытия */
-    }
-    to {
-      filter: blur(10px); /* Конечное значение - размытие на 10 пикселей */
-    }
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Exo', Arial, sans-serif;
+  background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
+  color: #fff;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  filter: blur(10px);
+  transition: filter 3s ease-in-out;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #00f;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  font-family: 'Exo', Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #00f;
+  color: #fff;
+  border: 2px solid #00f;
+  box-shadow: 0px 0px 10px 2px #00f;
+}
+
+button:active {
+  background-color: #007acc;
+  border: 2px solid #007acc;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
