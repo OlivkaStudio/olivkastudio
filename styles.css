@@ -18,7 +18,7 @@ body {
   img {
     width: 100%;
     height: auto;
-    transition: opacity 1s ease-in-out;
+    /* transition: opacity 1s ease-in-out; */
     animation: blurEffect 5s ease-in-out;
 
   }
