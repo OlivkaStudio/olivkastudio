@@ -22,7 +22,7 @@
       position: relative;
       width: 100%;
       overflow: hidden;
-      filter: blur(10px); /* Начальное значение блюра */
+      filter: blur(0px); /* Начальное значение блюра */
       transition: filter 3s ease-in-out; /* Добавляем анимацию блюра */
     }
 
@@ -80,17 +80,16 @@
       const readyButton = document.getElementById("readyButton");
       let currentImageIndex = 0;
 
-      // Снимаем блюр при старте
-      imageContainer.style.filter = "blur(0px)";
+      imageContainer.style.filter = "blur(25px)";
 
       function changeImage() {
-        imageContainer.style.filter = "blur(10px)";
+        imageContainer.style.filter = "blur(0px)";
         imageElement.style.opacity = 0;
         setTimeout(() => {
           imageElement.src = images[currentImageIndex];
           currentImageIndex = (currentImageIndex + 1) % images.length;
           imageElement.style.opacity = 1;
-          imageContainer.style.filter = "blur(0px)";
+          imageContainer.style.filter = "blur(25px)";
         }, 1000);
       }
 
